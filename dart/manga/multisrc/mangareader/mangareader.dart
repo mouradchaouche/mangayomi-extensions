@@ -192,7 +192,7 @@ class MangaReader extends MProvider {
     manga.status = parseStatus(status, statusList);
     manga.genre = seriesDetails
         .select("div.gnr a, .mgen a, .seriestugenre a, " +
-            "span:contains(genre) , span:contains(التصنيف")
+            "span:contains(genre) , span:contains(التصنيف)")
         .map((e) => e.text)
         .toList();
     final elements = document.select(
